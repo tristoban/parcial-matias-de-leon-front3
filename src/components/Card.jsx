@@ -1,9 +1,17 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
+  
+  const buttonStyle = {
+    backgroundColor: ('#'+props.color),
+    color: 'white',
+  };
+
   return (
-    <div>
-      return <div>Hola, soy una tarjeta</div>
+    <div className='card-container'>
+      <p className='text'>Hola, {props.name}!</p>
+      <p className='text'>Sabemos que tu color favorito es:</p>
+      <button style={buttonStyle}>{'#'+props.color}</button>
     </div>
   )
 }
